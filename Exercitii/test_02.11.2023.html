@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Define the variables
+    let galaxy = "Galaxy Model";
+    let samsung = "Samsung Constructor";
+
+    // Correct the config object
+    let config = {
+        model: galaxy,
+        pret: 1999,
+        constructor: samsung,
+        memory: 128
+    };
+
+
+    function print() {
+        console.log("text");
+    }
+
+    // Assign the function to a variable
+    let y = print;
+    console.log(y);
+
+    // Constructor function for creating config objects
+    function createConfig(model, pret, constructor, memory) {
+        this.model = model;
+        this.pret = pret;
+        this.constructor = constructor;
+        this.memory = memory;
+    }
+
+    // Create an instance of createConfig
+    let firstObiect = new createConfig(galaxy, 1999, samsung, 128);
+    console.log(firstObiect);
+
+    // Define a variable and a function
+    var x = 22;
+    function intern() {
+        let tablou = "some value"; // Assuming "tablou" is a string
+        console.log(tablou);
+        console.log("sunt in functia intern");
+    }
+    intern(); // Call the "intern" function
+
+    // Use a prompt to get user input
+    let numar = window.prompt("Introduce a number");
+
+    // Function to multiply the input by 7 and display the result
+    function multiplicare7(numar) {
+        let resultat = numar * 7; // Multiply by 7
+        alert(resultat);
+    }
+
+    multiplicare7(numar); // Call the "multiplicare7" function
+
+</script>
+
+<script>
+    // Simple function
+    function vehicle(name,maker,engine){
+        this.name = name;
+        this.maker = maker;
+        this.engine = engine;
+    }
+    // New keyword to create an object
+    let car = new vehicle('GT','BMW','1998cc');
+    // Property accessors
+    console.log(car.name);
+    console.log(car.maker);
+    console.log(car['engine']);
+
+</script>
+
+</body>
+</html>
